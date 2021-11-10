@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { InputAction } from "./components/inputAction";
 import { ItemToDo } from "./components/item";
 
-function App() {
+function App({service}) {
   //{description: '' status: done || todo }
-  const [tasks, setTasks] = useState([{id: 1, description: 'Limpar o quintal', status: 'todo'}, {id: 0, description: 'Comprar maçã, banana e tomate', status: 'done'}])
+  const [tasks, setTasks] = useState([])
   
   const addTask = (description) => {
     const id = Math.floor((Math.random() * 10000) + 1);
@@ -19,7 +19,11 @@ function App() {
     setTasks([...copyTask, taskToChange ]);
   }
 
-  const toDoTasks = tasks.filter(task => task.status === 'todo')
+  useEffect(() => {
+   service.getTasks().then(response => setTasks(response))
+  }, []);
+
+  const toDoTasks = tasks.filter(task => task.status === 'todo');
  
   return (
     <div className="App">
