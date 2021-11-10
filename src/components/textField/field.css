@@ -1,0 +1,14 @@
+.field-label{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: medium;
+    font-weight: 500;
+    color:  #282c34;
+}
+
+.field-input {
+    margin-top: 2px;
+    width: 300px;
+    height: 20px;   
+}

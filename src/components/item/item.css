@@ -1,0 +1,38 @@
+.item-to-do {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 500px;
+    padding: 5px;
+    margin-top: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 5px;
+}
+
+.item-to-do-label{
+    width: 80%;
+    text-align: justify;
+}
+
+.item-to-do-remove {
+    margin: 2px;
+    background-color: tomato;
+    border: none;
+    color: aliceblue;
+    font-size: larger; 
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+.item-to-do-add {
+    margin: 2px;
+    background-color: green;
+    border: none;
+    color: aliceblue;
+    font-size: larger; 
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}

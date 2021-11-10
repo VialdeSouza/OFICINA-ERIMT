@@ -1,0 +1,12 @@
+.input-action {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.input-action-button {
+    height: 27px;   
+    border: none;
+    background-color: green;
+    color: aliceblue;
+    font-size: small; 
+}
